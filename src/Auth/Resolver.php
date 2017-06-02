@@ -21,6 +21,7 @@ class Resolver implements ResolverInterface
     public function __construct(ProviderInterface $provider)
     {
         $this->provider = $provider;
+        $this->provider->auth()->bindAsAdministrator();
     }
 
     /**
